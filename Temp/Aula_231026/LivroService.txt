@@ -1,0 +1,105 @@
+using System;
+using APIBiblioteca.Data;
+using APIBiblioteca.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace APIBiblioteca.Service
+{
+    public class LivroService
+    {
+        private readonly ApiDbContext _context;
+
+        public LivroService(ApiDbContext context)
+        {
+            _context = context;
+        }
+
+        public async Task<List<Livro>> ListarAsync()
+        {
+            try
+            {
+                return await _context.Livros.OrderBy(livro => livro.Id).ToListAsync();
+            }
+            catch (Exception ex)
+            {
+                throw new InvalidOperationException(
+                    "Não foi possível consultar os livros (Service).", ex);
+            }
+        }
+
+        public async Task<Livro> InserirAsync(Livro livro)
+        {
+            _context.Livros.Add(livro);
+
+            try
+            {
+                await _context.SaveChangesAsync();
+                return livro;
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new InvalidOperationException(
+                "Não foi possível cadastrar o livro.", ex);
+            }
+        }
+
+        public async Task<Livro> ObterPorIdAsync(int id)
+        {
+            try
+            {
+                var livro = await _context.Livros.FindAsync(id);
+                if (livro is null)
+                {
+                    throw new KeyNotFoundException($"Livro com ID{id} não encontrado.");
+                }
+                return livro;
+            }
+            catch (InvalidOperationException ex)
+            {
+                throw new InvalidOperationException(
+                "Não foi possível consultar o livro.", ex);
+            }
+        }
+
+        public async Task<Livro> AtualizarAsync(int id, Livro dados)
+        {
+            try
+            {
+                var livro = await _context.Livros.FindAsync(id);
+                if (livro is null)
+                {
+                    throw new KeyNotFoundException($"Livro com ID{id} não encontrado.");
+                }
+                livro.Titulo = dados.Titulo;
+                livro.Autor = dados.Autor;
+                livro.Emprestado = dados.Emprestado;
+                await _context.SaveChangesAsync();
+                return livro;
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new InvalidOperationException(
+                "Não foi possível atualizar o livro.", ex);
+            }
+        }
+
+        public async Task RemoverAsync(int id)
+        {
+            try
+            {
+                var livro = await _context.Livros.FindAsync(id);
+                if (livro is null)
+                {
+                    throw new KeyNotFoundException($"Livro com ID {id} nao encontrado.");
+                }
+                _context.Livros.Remove(livro);
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException ex)
+            {
+                throw new InvalidOperationException(
+                    "Não foi possível remover o livro.", ex);
+            }
+        }
+    }
+}

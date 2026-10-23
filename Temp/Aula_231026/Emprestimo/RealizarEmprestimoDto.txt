@@ -1,0 +1,13 @@
+using System.ComponentModel.DataAnnotations;
+
+namespace APIBiblioteca.Dto
+{
+    public class RealizarEmprestimoDto
+    {
+        [Range(1, int.MaxValue)]
+        public int UsuarioId { get; set; }
+
+        [Range(1, int.MaxValue)]
+        public int LivroId { get; set; }
+    }
+}

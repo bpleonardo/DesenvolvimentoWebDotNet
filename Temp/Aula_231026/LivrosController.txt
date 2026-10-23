@@ -1,0 +1,108 @@
+using APIBiblioteca.Models;
+using APIBiblioteca.Service;
+using Microsoft.AspNetCore.Http;
+using Microsoft.AspNetCore.Mvc;
+
+namespace APIBiblioteca.Controllers
+{
+	[Route("api/[controller]")]
+	[ApiController]
+	public class LivrosController : ControllerBase
+	{
+		private readonly LivroService _livroService;
+
+		 public LivrosController(LivroService livroservice)
+		 {
+		     _livroService = livroservice;
+		 }
+
+		[HttpGet]
+		 public async Task<ActionResult<List<Livro>>> ListarAsync()
+		 {
+		     try
+		     {
+				  var livros = await _livroService.ListarAsync();
+				  return Ok(livros);
+		     }
+		     catch
+		     {
+				  return StatusCode(500, new
+				  {
+				      mensagem = "Não foi possível consultar os livros (Controller)"
+				  });
+		     }
+		 }
+
+		[HttpPost]
+		 public async Task<ActionResult<Livro>> Inserir([FromBody] Livro livro)
+		 {
+		     try
+		     {
+				  var livroCriado = await _livroService.InserirAsync(livro);
+
+				  return StatusCode(201, livroCriado);
+		     }
+		     catch (InvalidOperationException ex)
+		     {
+				  return StatusCode(500, new
+				  {
+				      mensagem = "Não foi possível Inserir"
+				  });
+		     }
+		 }
+
+		[HttpGet("{id:int}")]
+		 public async Task<ActionResult<Livro>> ObterPorId(int id)
+		 {
+		     try
+		     {
+				  var livro = await _livroService.ObterPorIdAsync(id);
+				  return Ok(livro);
+		     }
+		     catch (KeyNotFoundException ex)
+		     {
+				  return NotFound(new { mensagem = ex.Message });
+		     }
+		     catch (InvalidOperationException ex)
+		     {
+				  return StatusCode(500, new { mensagem = ex.Message });
+		     }
+		 }
+
+		[HttpPut("{id:int}")]
+		 public async Task<ActionResult<Livro>> Atualizar(int id, [FromBody] Livro dados)
+		 {
+		     try
+		     {
+				  var livro = await _livroService.AtualizarAsync(id, dados);
+				  return Ok(livro);
+		     }
+		     catch (KeyNotFoundException ex)
+		     {
+				  return NotFound(new { mensagem = ex.Message });
+		     }
+		     catch (InvalidOperationException ex)
+		     {
+				  return StatusCode(500, new { mensagem = ex.Message });
+		     }
+		 }
+
+		[HttpDelete("{id:int}")]
+		 public async Task<IActionResult> Remover(int id)
+		 {
+		     try
+		     {
+				  await _livroService.RemoverAsync(id);
+				  return NoContent();
+		     }
+		     catch (KeyNotFoundException ex)
+		     {
+				  return NotFound(new { mensagem = ex.Message });
+		     }
+		     catch (InvalidOperationException ex)
+		     {
+				  return StatusCode(500, new { mensagem = ex.Message });
+		     }
+		 }
+    }
+}
