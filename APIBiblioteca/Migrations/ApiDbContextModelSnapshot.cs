@@ -45,6 +45,22 @@ namespace APIBiblioteca.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Livros");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Autor = "Machado de Assis",
+                            Emprestado = false,
+                            Titulo = "Dom Casmurro"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Autor = "Antoine de Saint-Exupery",
+                            Emprestado = false,
+                            Titulo = "O Pequeno Principe"
+                        });
                 });
 #pragma warning restore 612, 618
         }

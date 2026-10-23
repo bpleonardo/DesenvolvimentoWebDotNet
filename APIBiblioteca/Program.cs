@@ -1,4 +1,5 @@
 using APIBiblioteca.Data;
+using APIBiblioteca.Service;
 using Microsoft.EntityFrameworkCore;
 
 namespace APIBiblioteca
@@ -12,6 +13,8 @@ namespace APIBiblioteca
             //Registrando o Serviço da ApiDbContext
             builder.Services.AddDbContext<ApiDbContext>(options => options.UseNpgsql(
                 builder.Configuration.GetConnectionString("DefaultConnection")));
+
+            builder.Services.AddScoped<LivroService>();
 
             // Add services to the container.
 

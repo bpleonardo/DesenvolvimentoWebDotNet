@@ -1,5 +1,51 @@
 [
   {
+    "ContainingType": "APIBiblioteca.Controllers.LivrosController",
+    "Method": "ListarAsync",
+    "RelativePath": "api/Livros",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": [
+      {
+        "Type": "System.Collections.Generic.List\u00601[[APIBiblioteca.Models.Livro, APIBiblioteca, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "APIBiblioteca.Controllers.LivrosController",
+    "Method": "Inserir",
+    "RelativePath": "api/Livros",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "livro",
+        "Type": "APIBiblioteca.Models.Livro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "APIBiblioteca.Models.Livro",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "APIBiblioteca.Controllers.WeatherForecastController",
     "Method": "Get",
     "RelativePath": "WeatherForecast",

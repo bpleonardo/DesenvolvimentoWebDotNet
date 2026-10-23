@@ -11,8 +11,8 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace APIBiblioteca.Migrations
 {
     [DbContext(typeof(ApiDbContext))]
-    [Migration("20261015003146_PrimeiraMigration")]
-    partial class PrimeiraMigration
+    [Migration("20261021224831_DadosInicais")]
+    partial class DadosInicais
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -48,6 +48,22 @@ namespace APIBiblioteca.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Livros");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Autor = "Machado de Assis",
+                            Emprestado = false,
+                            Titulo = "Dom Casmurro"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Autor = "Antoine de Saint-Exupery",
+                            Emprestado = false,
+                            Titulo = "O Pequeno Principe"
+                        });
                 });
 #pragma warning restore 612, 618
         }
