@@ -1,22 +1,54 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\",
+  "WorkspaceRootPath": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|d:\\onedrive\\unip\\disciplinas\\desenvolvimentowebdotnet\\desenvolvimento\\apibiblioteca\\service\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\service\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:service\\livroservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|d:\\onedrive\\unip\\disciplinas\\desenvolvimentowebdotnet\\desenvolvimento\\apibiblioteca\\models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\service\\emprestimoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:service\\emprestimoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:models\\livro.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|d:\\onedrive\\unip\\disciplinas\\desenvolvimentowebdotnet\\desenvolvimento\\apibiblioteca\\data\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\models\\emprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:models\\emprestimo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\dto\\realizaremprestimodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:dto\\realizaremprestimodto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\data\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:data\\apidbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|d:\\onedrive\\unip\\disciplinas\\desenvolvimentowebdotnet\\desenvolvimento\\apibiblioteca\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:controllers\\livroscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:controllers\\emprestimocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Migrations\\20261023193927_movimentacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:Migrations\\20261023193927_movimentacao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|c:\\users\\lucas\\desktop\\apibiblioteca\\migrations\\20261023195942_primeira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D9E823E8-607A-4A83-AB1F-6B7DEBE69837}|APIBiblioteca.csproj|solutionrelative:migrations\\20261023195942_primeira.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,30 +58,56 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 1,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "ApiDbContext.cs",
-              "DocumentMoniker": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Data\\ApiDbContext.cs",
-              "RelativeDocumentMoniker": "Data\\ApiDbContext.cs",
-              "ToolTip": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Data\\ApiDbContext.cs",
-              "RelativeToolTip": "Data\\ApiDbContext.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAABAAAAAJAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "RealizarEmprestimoDto.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Dto\\RealizarEmprestimoDto.cs",
+              "RelativeDocumentMoniker": "Dto\\RealizarEmprestimoDto.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Dto\\RealizarEmprestimoDto.cs",
+              "RelativeToolTip": "Dto\\RealizarEmprestimoDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-23T14:23:23.981Z",
+              "WhenOpened": "2026-10-23T19:42:47.01Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "Emprestimo.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Models\\Emprestimo.cs",
+              "RelativeDocumentMoniker": "Models\\Emprestimo.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Models\\Emprestimo.cs",
+              "RelativeToolTip": "Models\\Emprestimo.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAjAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:27:00.537Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "Models\\Usuario.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Models\\Usuario.cs",
+              "RelativeToolTip": "Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:23:43.753Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
               "Title": "LivroService.cs",
-              "DocumentMoniker": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Service\\LivroService.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Service\\LivroService.cs",
               "RelativeDocumentMoniker": "Service\\LivroService.cs",
-              "ToolTip": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Service\\LivroService.cs",
-              "RelativeToolTip": "Service\\LivroService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAEEAAAANAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Service\\LivroService.cs*",
+              "RelativeToolTip": "Service\\LivroService.cs*",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwBoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-10-23T14:11:11.651Z",
               "EditorCaption": ""
@@ -57,10 +115,62 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "EmprestimoService.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Service\\EmprestimoService.cs",
+              "RelativeDocumentMoniker": "Service\\EmprestimoService.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Service\\EmprestimoService.cs",
+              "RelativeToolTip": "Service\\EmprestimoService.cs",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAowBwAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:43:33.191Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApiDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Data\\ApiDbContext.cs",
+              "RelativeDocumentMoniker": "Data\\ApiDbContext.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Data\\ApiDbContext.cs",
+              "RelativeToolTip": "Data\\ApiDbContext.cs",
+              "ViewState": "AgIAAB8AAAAAAAAAAAAcwDkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T14:23:23.981Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "LivrosController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Controllers\\LivrosController.cs",
+              "RelativeDocumentMoniker": "Controllers\\LivrosController.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Controllers\\LivrosController.cs",
+              "RelativeToolTip": "Controllers\\LivrosController.cs",
+              "ViewState": "AgIAAFsAAAAAAAAAAAAcwIgAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-21T22:50:34.493Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "EmprestimoController.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Controllers\\EmprestimoController.cs",
+              "RelativeDocumentMoniker": "Controllers\\EmprestimoController.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Controllers\\EmprestimoController.cs",
+              "RelativeToolTip": "Controllers\\EmprestimoController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:46:03.143Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "Livro.cs",
-              "DocumentMoniker": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Models\\Livro.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Models\\Livro.cs",
               "RelativeDocumentMoniker": "Models\\Livro.cs",
-              "ToolTip": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Models\\Livro.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Models\\Livro.cs",
               "RelativeToolTip": "Models\\Livro.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -69,16 +179,39 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "LivrosController.cs",
-              "DocumentMoniker": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Controllers\\LivrosController.cs",
-              "RelativeDocumentMoniker": "Controllers\\LivrosController.cs",
-              "ToolTip": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\Controllers\\LivrosController.cs",
-              "RelativeToolTip": "Controllers\\LivrosController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACgAAAARAAAAAAAAAA==",
+              "DocumentIndex": 10,
+              "Title": "20261023193927_movimentacao.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Migrations\\20261023193927_movimentacao.cs",
+              "RelativeDocumentMoniker": "Migrations\\20261023193927_movimentacao.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Migrations\\20261023193927_movimentacao.cs",
+              "RelativeToolTip": "Migrations\\20261023193927_movimentacao.cs",
+              "ViewState": "AgIAAAsAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-10-21T22:50:34.493Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-10-23T19:39:27.59Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Program.cs",
+              "RelativeDocumentMoniker": "Program.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Program.cs",
+              "RelativeToolTip": "Program.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAQwBAAAAA8AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:45:42.1Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "20261023195942_primeira.cs",
+              "DocumentMoniker": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Migrations\\20261023195942_primeira.cs",
+              "RelativeDocumentMoniker": "Migrations\\20261023195942_primeira.cs",
+              "ToolTip": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\Migrations\\20261023195942_primeira.cs",
+              "RelativeToolTip": "Migrations\\20261023195942_primeira.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAgwAkAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-10-23T19:59:42.264Z"
             }
           ]
         }

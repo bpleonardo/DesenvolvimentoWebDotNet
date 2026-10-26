@@ -3251,11 +3251,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\APIBiblioteca.csproj",
+      "projectUniqueName": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\APIBiblioteca.csproj",
       "projectName": "APIBiblioteca",
-      "projectPath": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\APIBiblioteca.csproj",
+      "projectPath": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\APIBiblioteca.csproj",
       "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-      "outputPath": "D:\\OneDrive\\UNIP\\Disciplinas\\DesenvolvimentoWebDotNet\\Desenvolvimento\\APIBiblioteca\\obj\\",
+      "outputPath": "C:\\Users\\Lucas\\Desktop\\APIBiblioteca\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -2,26 +2,25 @@ using System.ComponentModel.DataAnnotations;
 
 namespace APIBiblioteca.Models
 {
-    // Representa um livro da biblioteca e seu estado de empréstimo.
+    // Representa um livro e sua disponibilidade para empréstimo.
+    // Título e autor são obrigatórios, com limites de 150 e 100 caracteres.
+    // As strings começam vazias para evitar valores nulos.
     public class Livro
     {
-        // Identificador único do livro.
+        // Identificador do livro.
         public int Id { get; set; }
 
-        // Título obrigatório do livro, limitado a 150 caracteres.
-        // Inicializado com uma string vazia para evitar um valor nulo.
         [Required]
         [StringLength(150)]
+        // Título do livro.
         public string Titulo { get; set; } = string.Empty;
 
-        // Nome obrigatório do autor, limitado a 100 caracteres.
-        // Inicializado com uma string vazia para evitar um valor nulo.
         [Required]
         [StringLength(100)]
+        // Autor do livro.
         public  string Autor { get; set; } = string.Empty;
 
-        // Indica se o livro está emprestado: true para emprestado e false para disponível.
-        // O valor padrão é false.
+        // true indica emprestado; false indica disponível.
         public bool Emprestado { get; set; }
 
     }

@@ -1,5 +1,31 @@
 [
   {
+    "ContainingType": "APIBiblioteca.Controllers.EmprestimoController",
+    "Method": "Realizar",
+    "RelativePath": "api/Emprestimo",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "dados",
+        "Type": "APIBiblioteca.Dto.RealizarEmprestimoDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "APIBiblioteca.Models.Emprestimo",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
     "ContainingType": "APIBiblioteca.Controllers.LivrosController",
     "Method": "ListarAsync",
     "RelativePath": "api/Livros",
@@ -46,16 +72,22 @@
     ]
   },
   {
-    "ContainingType": "APIBiblioteca.Controllers.WeatherForecastController",
-    "Method": "Get",
-    "RelativePath": "WeatherForecast",
+    "ContainingType": "APIBiblioteca.Controllers.LivrosController",
+    "Method": "ObterPorId",
+    "RelativePath": "api/Livros/{id}",
     "HttpMethod": "GET",
     "IsController": true,
     "Order": 0,
-    "Parameters": [],
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
     "ReturnTypes": [
       {
-        "Type": "System.Collections.Generic.IEnumerable\u00601[[APIBiblioteca.WeatherForecast, APIBiblioteca, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null]]",
+        "Type": "APIBiblioteca.Models.Livro",
         "MediaTypes": [
           "text/plain",
           "application/json",
@@ -64,5 +96,52 @@
         "StatusCode": 200
       }
     ]
+  },
+  {
+    "ContainingType": "APIBiblioteca.Controllers.LivrosController",
+    "Method": "Atualizar",
+    "RelativePath": "api/Livros/{id}",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      },
+      {
+        "Name": "dados",
+        "Type": "APIBiblioteca.Models.Livro",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "APIBiblioteca.Models.Livro",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "APIBiblioteca.Controllers.LivrosController",
+    "Method": "Remover",
+    "RelativePath": "api/Livros/{id}",
+    "HttpMethod": "DELETE",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Int32",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
