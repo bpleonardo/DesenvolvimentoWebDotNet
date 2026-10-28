@@ -1,0 +1,213 @@
+﻿EXEMPLOJWT - TRECHOS PARA IMPLEMENTAR DURANTE A AULA
+
+Os modelos, os usuários em memória e os três endpoints já estão no projeto base.
+Cada seção indica o arquivo, o local e o código que deve ser acrescentado ou substituído.
+Os using devem ser importados pela IDE.
+
+================================================================
+ARQUIVO: Controllers/AuthController.cs
+LOCAL: Dentro da classe AuthController.
+AÇÃO: Acrescentar o método de login. Se já existir, substituir o método.
+================================================================
+
+[AllowAnonymous]
+[HttpPost("login")]
+public IActionResult Login(UsuarioDto dto)
+{
+    var usuario = _usuarios.FirstOrDefault(u =>
+        u.Email.Equals(dto.Email, StringComparison.OrdinalIgnoreCase)
+        && u.Senha == dto.Senha);
+
+    if (usuario is null)
+        return Unauthorized();
+
+    return Ok(new { mensagem = "Login realizado com sucesso" });
+}
+
+================================================================
+ARQUIVO: appsettings.json
+AÇÃO: Utilizar a configuração abaixo, preservando outras configurações do projeto.
+================================================================
+
+{
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*",
+  "Jwt": {
+    "Key": "ExemploJwt-chave-didatica-32-bytes-minimo!",
+    "Issuer": "ExemploJwt",
+    "Audience": "ExemploJwt.Cliente"
+  }
+}
+
+================================================================
+ARQUIVO: Services/TokenService.cs
+AÇÃO: Criar a classe TokenService na pasta Services e incluir o código abaixo.
+O namespace deve seguir o padrão do projeto e pode ser gerado pela IDE.
+================================================================
+
+public class TokenService
+{
+    private readonly IConfiguration _config;
+
+    public TokenService(IConfiguration config)
+    {
+        _config = config;
+    }
+
+    public string Gerar(Usuario usuario)
+    {
+        var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+            _config["Jwt:Key"]!));
+        var claims = new[]
+        {
+            new Claim(JwtRegisteredClaimNames.Sub, usuario.Email),
+            new Claim("role", usuario.Role)
+        };
+        var token = new JwtSecurityToken(
+            issuer: _config["Jwt:Issuer"],
+            audience: _config["Jwt:Audience"],
+            claims: claims,
+            notBefore: DateTime.UtcNow,
+            expires: DateTime.UtcNow.AddMinutes(30),
+            signingCredentials: new SigningCredentials(
+                chave, SecurityAlgorithms.HmacSha256));
+    
+        return new JwtSecurityTokenHandler().WriteToken(token);
+    }
+}
+
+================================================================
+ARQUIVO: Controllers/AuthController.cs
+LOCAL: Dentro da classe, fora do método Login.
+AÇÃO: Acrescentar o campo e o construtor. Se houver construtor, ajustá-lo.
+================================================================
+
+private readonly TokenService _tokens;
+
+public AuthController(TokenService tokens)
+{
+    _tokens = tokens;
+}
+
+================================================================
+ARQUIVO: Controllers/AuthController.cs
+LOCAL: No final do método Login, após a verificação das credenciais.
+AÇÃO: Substituir apenas o retorno de sucesso pelo trecho abaixo.
+================================================================
+
+return Ok(new
+{
+    access_token = _tokens.Gerar(usuario),
+    token_type = "Bearer",
+    expires_in = 1800
+});
+
+================================================================
+ARQUIVO: Program.cs
+LOCAL: Antes de builder.Build().
+AÇÃO: Acrescentar o registro do serviço.
+================================================================
+
+builder.Services.AddScoped<TokenService>();
+
+================================================================
+ARQUIVO: Program.cs
+LOCAL: Antes de builder.Build() e antes da configuração da autenticação.
+AÇÃO: Acrescentar os serviços de autorização e preparar a chave.
+================================================================
+
+builder.Services.AddAuthorization();
+
+var chave = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(
+    builder.Configuration["Jwt:Key"]
+    ?? throw new InvalidOperationException("Chave ausente")));
+
+================================================================
+ARQUIVO: Program.cs
+LOCAL: Após a criação de chave e antes de builder.Build().
+AÇÃO: Acrescentar a configuração da autenticação JWT.
+================================================================
+
+builder.Services
+    .AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+    .AddJwtBearer(options =>
+    {
+        options.MapInboundClaims = false;
+        options.TokenValidationParameters = new()
+        {
+            ValidateIssuerSigningKey = true,
+            IssuerSigningKey = chave,
+            ValidateIssuer = true,
+            ValidIssuer = builder.Configuration["Jwt:Issuer"],
+            ValidateAudience = true,
+            ValidAudience = builder.Configuration["Jwt:Audience"],
+            ValidateLifetime = true,
+            ClockSkew = TimeSpan.Zero,
+            RoleClaimType = "role",
+            ValidAlgorithms = new[] { SecurityAlgorithms.HmacSha256 }
+        };
+    });
+
+================================================================
+ARQUIVO: Program.cs
+LOCAL: Após app.UseHttpsRedirection() e antes de app.MapControllers().
+AÇÃO: Acrescentar as chamadas abaixo, nesta ordem.
+Se app.UseAuthorization() já existir, apenas posicioná-la após UseAuthentication().
+================================================================
+
+app.UseAuthentication();
+app.UseAuthorization();
+
+================================================================
+ARQUIVO: Controllers/ProdutosController.cs
+LOCAL: Imediatamente acima de cada método indicado.
+AÇÃO: Acrescentar somente o atributo correspondente; manter o código dos métodos.
+================================================================
+
+Método Publico:
+
+[AllowAnonymous]
+
+Método Autenticado:
+
+[Authorize]
+
+Método Admin:
+
+[Authorize(Roles = "Admin")]
+
+================================================================
+ARQUIVO: Program.cs
+LOCAL: No registro do Swagger, antes de builder.Build().
+AÇÃO: Substituir a chamada existente de AddSwaggerGen pelo trecho abaixo.
+Utiliza a API do Swagger anterior ao Swashbuckle 10, conforme o projeto da aula.
+================================================================
+
+builder.Services.AddSwaggerGen(options =>
+{
+    options.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "bearer",
+        BearerFormat = "JWT",
+        Description = "Informe o token retornado pelo login."
+    });
+    options.AddSecurityRequirement(new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme, Id = "Bearer"
+                }
+            },
+            Array.Empty<string>()
+        }
+    });
+});
